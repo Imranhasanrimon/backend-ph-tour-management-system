@@ -1,17 +1,9 @@
 /* eslint-disable no-console */
 import mongoose from "mongoose";
 import app from "./app";
-import { Request, Response } from "express";
 import { Server } from "http"
 import { envVars } from "./app/config/env";
 
-
-app.get("/", (req: Request, res: Response) => {
-    res.send({
-        success: true,
-        message: "This is the home route of PH Tour Management Backend Application"
-    })
-})
 
 let server: Server
 const startServer = async () => {
